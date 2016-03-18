@@ -35,7 +35,7 @@
 				}
 				?>
 				</select></span>
-			我持有 <span class="firecard"><?php echo $member['money'] ;?> 个 Fire Card</span> <a href="member.php?action=pay"><span class="badge">充值</span></a>
+			我持有 <span class="firecard"><?php echo $member['money'] ;?> 个 元</span> <a href="member.php?action=pay"><span class="badge">充值</span></a>
 		</div>
 		<div class="spinner">
 			<div class="double-bounce1"></div>
