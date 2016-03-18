@@ -32,7 +32,7 @@
 			<?php
 			if ($commodity && $region && $region['max_member'] > $region['active_member']) {
 			?>
-			<p><?php echo $region['name']; ?> 区域的<?php echo $commodity['name']; ?>套餐售价是 <span class="firecard"><?php echo $commodity['price']; ?> Fire Card</span>，包括 <?php echo $commodity['transfer']; ?> GByte 流量，如果现在购买该区域将可以使用至 <?php echo date('Y 年 m 月 d 日', time()+$commodity['time']); ?></p>
+			<p><?php echo $region['name']; ?> 区域的<?php echo $commodity['name']; ?>套餐售价是 <span class="firecard"><?php echo $commodity['price']; ?> 元</span>，包括 <?php echo $commodity['transfer']; ?> GByte 流量，如果现在购买该区域将可以使用至 <?php echo date('Y 年 m 月 d 日', time()+$commodity['time']); ?></p>
 			<form method="POST" action="member.php?action=order&id=<?php echo $commodity['id']; ?>">
 				<p>
 					<p>购买 <select id="count" name="count">
@@ -46,7 +46,7 @@
 					<input type="text" placeholder="折扣码" id="discount_code" name="discount_code" />
 				</p>
 				<p><input type="submit" class="button" value="提交订单" id="submit" /></p>
-				<p id="message">价格是 <span class="firecard"><?php echo $commodity["price"]; ?> Fire Card</span></p>
+				<p id="message">价格是 <span class="firecard"><?php echo $commodity["price"]; ?> 元</span></p>
 			</form>
 			<?php
 			} else {
