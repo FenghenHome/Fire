@@ -271,7 +271,7 @@ if (isset($_GET['action'])) {
 									$use_discount_code = true;
 									$discounted_price = $commodity['price'] * $count - $discount["discount_price"];
 								} else {
-									$message[] = "折扣码需要满 {$discount['min_price']} Fire Card 使用";
+									$message[] = "折扣码需要满 {$discount['min_price']} 元 使用";
 								}
 							}
 						} else {
@@ -291,7 +291,7 @@ if (isset($_GET['action'])) {
 							} else if ($member['money'] >= $discounted_price) {
 								// 插入尝试扣款日志
 								$active = $db->insert('active', array(
-									'content' => "[未扣款]尝试购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，支付 {$discounted_price} Fire Card，余额 {$member['money']} Fire Card",
+									'content' => "[未扣款]尝试购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，支付 {$discounted_price} 元，余额 {$member['money']} 元",
 									'username' => $token['username'],
 									'time' => date('Y-m-d H:i:s', time())
 								));
@@ -303,7 +303,7 @@ if (isset($_GET['action'])) {
 								if ($db->update('member', array('money[-]'=>$discounted_price), array('id'=>$member['id']))) {
 									// 扣款成功
 									$active = $db->insert('active', array(
-										'content' => "[已扣款]购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，支付 {$discounted_price} Fire Card，扣款前余额 {$member['money']} Fire Card",
+										'content' => "[已扣款]购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，支付 {$discounted_price} 元，扣款前余额 {$member['money']} 元",
 										'username' => $token['username'],
 										'time' => date('Y-m-d H:i:s', time())
 									));
@@ -312,7 +312,7 @@ if (isset($_GET['action'])) {
 									if (!$region_member) {
 										// 分配新账号
 										$active = $db->insert('active', array(
-											'content' => "[已扣款]尝试购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，支付 {$discounted_price} Fire Card，余额 {$member['money']} Fire Card",
+											'content' => "[已扣款]尝试购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，支付 {$discounted_price} 元，余额 {$member['money']} 元",
 											'username' => $token['username'],
 											'time' => date('Y-m-d H:i:s', time())
 										));
@@ -381,11 +381,11 @@ if (isset($_GET['action'])) {
 								}
 							} else {
 								$active = $db->insert('active', array(
-									'content' => "购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，余额 {$member['money']} Fire Card 不足以支付 {$discounted_price} Fire Card",
+									'content' => "购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，余额 {$member['money']} 元 不足以支付 {$discounted_price} 元",
 									'username' => $token['username'],
 									'time' => date('Y-m-d H:i:s', time())
 								));
-								$message[] = "余额不足以支付 {$discounted_price} Fire Card";
+								$message[] = "余额不足以支付 {$discounted_price} 元";
 							}
 						}
 					}
@@ -493,14 +493,14 @@ if (isset($_GET['action'])) {
 								$amount = (int)$data['data']['amount'];
 								if ($db->update('member', array('money[+]'=>$amount), array('name'=>$token['username']))) {
 									$active = $db->insert('active', array(
-										'content' => "订单号 {$tradeno} 充值 {$amount} 个 Fire Card",
+										'content' => "订单号 {$tradeno} 充值 {$amount} 个 元",
 										'username' => $token['username'],
 										'time' => date('Y-m-d H:i:s', time())
 									));
 									$message[] = '充值成功';
 								} else {
 									$active = $db->insert('active', array(
-										'content' => "订单号 {$tradeno} 充值失败 {$amount} 个 Fire Card",
+										'content' => "订单号 {$tradeno} 充值失败 {$amount} 个 元",
 										'username' => $token['username'],
 										'time' => date('Y-m-d H:i:s', time())
 									));
