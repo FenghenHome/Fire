@@ -300,7 +300,7 @@ if (isset($_GET['action'])) {
 									array('used_member' => $token['username']),
 									array('card' => $discount_code)
 								);
-								if ($discount_price == 0 || $db->update('member', array('money[-]'=>$discounted_price), array('id'=>$member['id']))) {
+								if ($db->update('member', array('money[-]'=>$discounted_price), array('id'=>$member['id']))) {
 									// 扣款成功
 									$active = $db->insert('active', array(
 										'content' => "[已扣款]购买 {$count} 个 {$region['name']} 区域的 {$commodity['name']} 套餐共 {$formated_transfer}，支付 {$discounted_price} Fire Card，扣款前余额 {$member['money']} Fire Card",
