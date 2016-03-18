@@ -26,7 +26,6 @@
 				<input type="text" placeholder="支付宝流水号" autofocus="autofocus" id="tradeno" name="tradeno" />
 				<input type="submit" class="button" />
 			</form>
-			<p>每 1 元人民币可以兑换 1 Fire Card</p>
 			<ol>
 				<li>向 <a href="https://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fshenghuo.alipay.com%2Fsend%2Fpayment%2Ffill.htm" target="_blank"><code>cenegd@live.com</code></a> 转账一个整数，小数部分将被忽略，使用手机支付宝可以免除手续费</li>
 				<li>访问 <a href="https://consumeprod.alipay.com/record/advanced.htm" target="_blank"><code>https://consumeprod.alipay.com/record/advanced.htm</code></a> 查看支付宝流水号粘贴到输入框中</li>
