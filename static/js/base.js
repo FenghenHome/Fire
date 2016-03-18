@@ -24,7 +24,7 @@ $(window).ready(function () {
 			for (var i=0; i < commodity.length; ++i) {
 				var expired_time = new Date();
 				expired_time.setTime(timestamp + commodity[i]["time"] * 1000);
-				innerHTML += '<div class="card-content"><a href="member.php?action=order&id=' + commodity[i]["id"] + '" class="button right">订购</a><a href="member.php?action=order&id=' + commodity[i]["id"] + '">' + commodity[i]["name"] + ' <span class="small-text">/ ' + commodity[i]["price"] +' 个 Fire Card</span></a><p class="small-text">' + commodity[i]["introduction"] + '</p><p class="small-text">在现在购买后可以使用至 ' + expired_time.toLocaleDateString() + '</p></div>';
+				innerHTML += '<div class="card-content"><a href="member.php?action=order&id=' + commodity[i]["id"] + '" class="button right">订购</a><a href="member.php?action=order&id=' + commodity[i]["id"] + '">' + commodity[i]["name"] + ' <span class="small-text">/ ' + commodity[i]["price"] +' 个 元</span></a><p class="small-text">' + commodity[i]["introduction"] + '</p><p class="small-text">在现在购买后可以使用至 ' + expired_time.toLocaleDateString() + '</p></div>';
 			};
 			if (result.length == 0) {
 				innerHTML += '<div class="card-content">该区域可能已经满员，暂无可订购套餐</div>';
@@ -115,9 +115,9 @@ $(window).ready(function () {
 						if (discounted_price < 0) {
 							var discounted_price = 0;
 						}
-						innerHTML += "折扣 " + discount["discount_price"] + ' Fire Card，最终价格是 <span class="firecard">' + discounted_price + ' Fird Card</span>';
+						innerHTML += "折扣 " + discount["discount_price"] + ' 元，最终价格是 <span class="firecard">' + discounted_price + ' 元</span>';
 					} else {
-						innerHTML += '价格是 <span class="firecard">' + (commodity["price"] * count) + " Fire Card</span>";
+						innerHTML += '价格是 <span class="firecard">' + (commodity["price"] * count) + " 元</span>";
 					}
 				}
 				innerHTML += '</p>';
