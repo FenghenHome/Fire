@@ -6,7 +6,8 @@ Shadowsocks Manyuser 控制面板
 
  1. 导入 fire.sql，配置 library/medoo.php
  2. 新建数据库，导入 region_fire.sql，这是 manyuser 的数据库，根据此数据库的信息配置 library/region.php，并且配置 manyuser
- 3. 配置 member.php 的 pay action 中的支付网关或者重写支付代码
+ 3. 配置library/cron.php 加入计划任务，用于每日自动重置过期用户流量！
+ 4. 配置 member.php 的 pay action 中的支付网关或者重写支付代码
 
 各表含义：
 
