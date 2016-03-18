@@ -59,8 +59,7 @@ $(window).ready(function () {
 				$(".spinner").css("display", "none");
 				var innerHTML = '<div class="card-content">';
 				if (result["message"] == "success") {
-					innerHTML += '<a class="button" href="member.php?action=quick_config&id=' + region + '">下载快速配置文件</a>';
-					innerHTML += '<a class="button right" href="member.php?action=region&id=' + region + '">查看所有节点</a>';
+					innerHTML += '<a class="button" href="member.php?action=region&id=' + region + '">查看所有节点</a>';
 					innerHTML += "<p>端口：" + result["port"] + "</p>";
 					innerHTML += "<p>密码：" + result["passwd"] + "</p>";
 					innerHTML += "<p>可用流量：" + result["transfer"] + "</p>";
