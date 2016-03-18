@@ -24,7 +24,7 @@ $(window).ready(function () {
 			for (var i=0; i < commodity.length; ++i) {
 				var expired_time = new Date();
 				expired_time.setTime(timestamp + commodity[i]["time"] * 1000);
-				innerHTML += '<div class="card-content"><a href="member.php?action=order&id=' + commodity[i]["id"] + '" class="button right">订购</a><a href="member.php?action=order&id=' + commodity[i]["id"] + '">' + commodity[i]["name"] + ' <span class="small-text">/ ' + commodity[i]["price"] +' 个 元</span></a><p class="small-text">' + commodity[i]["introduction"] + '</p><p class="small-text">在现在购买后可以使用至 ' + expired_time.toLocaleDateString() + '</p></div>';
+				innerHTML += '<div class="card-content"><a href="member.php?action=order&id=' + commodity[i]["id"] + '" class="button right">订购</a><a href="member.php?action=order&id=' + commodity[i]["id"] + '">' + commodity[i]["name"] + ' <span class="small-text">/ ' + commodity[i]["price"] +' 元</span></a><p class="small-text">' + commodity[i]["introduction"] + '</p><p class="small-text">在现在购买后可以使用至 ' + expired_time.toLocaleDateString() + '</p></div>';
 			};
 			if (result.length == 0) {
 				innerHTML += '<div class="card-content">该区域可能已经满员，暂无可订购套餐</div>';
