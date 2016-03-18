@@ -493,14 +493,14 @@ if (isset($_GET['action'])) {
 								$amount = (int)$data['data']['amount'];
 								if ($db->update('member', array('money[+]'=>$amount), array('name'=>$token['username']))) {
 									$active = $db->insert('active', array(
-										'content' => "订单号 {$tradeno} 充值 {$amount} 个 元",
+										'content' => "订单号 {$tradeno} 充值 {$amount} 元",
 										'username' => $token['username'],
 										'time' => date('Y-m-d H:i:s', time())
 									));
 									$message[] = '充值成功';
 								} else {
 									$active = $db->insert('active', array(
-										'content' => "订单号 {$tradeno} 充值失败 {$amount} 个 元",
+										'content' => "订单号 {$tradeno} 充值失败 {$amount} 元",
 										'username' => $token['username'],
 										'time' => date('Y-m-d H:i:s', time())
 									));
