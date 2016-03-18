@@ -1,6 +1,6 @@
 Shadowsocks Manyuser 控制面板
 
-Demo：https://fire.qiyichao.cn
+参考：https://github.com/ss098/Fire
 
 依赖 PDO MySQL。
 
