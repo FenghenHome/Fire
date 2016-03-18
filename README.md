@@ -20,4 +20,4 @@ Shadowsocks Manyuser 控制面板
  - token：用户登录授权码
 
 服务器端节点请参考
-https://github.com/mengskysama/shadowsocks/tree/manyuser
+https://github.com/mengskysama/shadowsocks-rm/tree/manyuser
