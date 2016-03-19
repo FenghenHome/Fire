@@ -439,8 +439,8 @@ if (isset($_GET['action'])) {
 						'shareOverLan' => false, // 共享
 						'isDefault' => false,
 						'localPort' => 1080,
-						'pacUrl' => 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt',
-						'useOnlinePac' => true,
+						'pacUrl' => null,
+						'useOnlinePac' => false,
 						'availabilityStatistics' => true
 					);
 					foreach ($server as $node) {
