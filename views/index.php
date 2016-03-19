@@ -2,6 +2,7 @@
 
 <header>
 	<a href="index.php" class="active">入门</a>
+	<a href="trial.php">试用</a>
 	<a href="member.php">账户</a>
 </header>
 
