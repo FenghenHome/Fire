@@ -39,23 +39,23 @@ $expired_time = "select expired_time from user";
 //查询过期时间字段
 $result = mysql_query($expired_time);
 //循环获取过期时间字段
-	while($expiredtime=mysql_fetch_array($result)){
-	    //获取过期时间字段
-	    $time=$expiredtime["expired_time"];
-	    //转换为日期
-	    $expired_date=date('Ymd',$time);
-	    //获取当前日期
- 	   $now_date=date('Ymd');
- 	   //当前日期和过期日期一样时候，流量重置为0
- 	   if ($now_date==$expired_date){
- 	       //流量为0
- 	       $transfer_enable = 0;
- 	       //流量重置
-    	    $sql = "UPDATE user SET transfer_enable = '".$transfer_enable."' WHERE expired_time = '".$time."'";
-   	     //流量重置
-  	      mysql_query($sql);
-        echo "done";
-  	  } else {
-        echo "ERROR";
- 	   }
+while($expiredtime=mysql_fetch_array($result)){
+	//获取过期时间字段
+	$time=$expiredtime["expired_time"];
+	//转换为日期
+	$expired_date=date('Ymd',$time);
+	//获取当前日期
+	$now_date=date('Ymd');
+	//当前日期和过期日期一样时候，流量重置为0
+	if ($now_date==$expired_date){
+		//流量为0
+		$transfer_enable = 0;
+		//流量重置
+		$sql = "UPDATE user SET transfer_enable = '".$transfer_enable."' WHERE expired_time = '".$time."'";
+		//流量重置
+		mysql_query($sql);
+		echo "done";
+  	} else {
+		echo "ERROR";
 	}
+}
