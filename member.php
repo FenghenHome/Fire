@@ -441,7 +441,7 @@ if (isset($_GET['action'])) {
 						'localPort' => 1080,
 						'pacUrl' => 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt',
 						'useOnlinePac' => true,
-						'availabilityStatistics' => false
+						'availabilityStatistics' => true
 					);
 					foreach ($server as $node) {
 						$gui_config['configs'][] = array(
