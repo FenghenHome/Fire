@@ -441,7 +441,7 @@ if (isset($_GET['action'])) {
 						'localPort' => 1080,
 						'pacUrl' => null,
 						'useOnlinePac' => false,
-						'availabilityStatistics' => true
+						'availabilityStatistics' => false
 					);
 					foreach ($server as $node) {
 						$gui_config['configs'][] = array(
