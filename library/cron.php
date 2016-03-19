@@ -29,5 +29,8 @@ while($expiredtime=mysql_fetch_array($result)){
         $sql = "UPDATE user SET transfer_enable = '".$transfer_enable."' WHERE expired_time = '".$time."'";
         //流量重置
         mysql_query($sql);
+        echo "done";
+    } else {
+        echo "ERROR";
     }
 }
