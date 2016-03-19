@@ -439,7 +439,7 @@ if (isset($_GET['action'])) {
 						'shareOverLan' => false, // 共享
 						'isDefault' => false,
 						'localPort' => 1080,
-						'pacUrl' => null,
+						'pacUrl' => 'http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt',
 						'useOnlinePac' => false,
 						'availabilityStatistics' => false
 					);
