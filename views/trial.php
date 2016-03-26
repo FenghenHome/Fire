@@ -20,8 +20,6 @@ $method_a ="aes-256-cfb";//填写加密方式
 	<div class="card">
 		<div class="card-header">试用</div>
 		<div class="card-content">
-			<p>在开始前，我希望你阅读 Fire 的基本条款</p>
-			<p>网络审查是围绕着我们生活中存在的一种现象，是与非不可轻易区分，但是不需要商榷的是<b>通过避免网络审查进行犯罪活动是违背道德的</b>。Fire 遵守中华人民共和国的法律，所以请您遵守<a href="http://www.gov.cn/gongbao/content/2011/content_1860856.htm" target="_blank">《计算机信息网络国际联网安全保护管理办法》</a>。</p>
 			<p>服务器除地址不一致以外，其他端口、密码和加密方式均一致</p>
 			<form>
 			<p class="small-text">
