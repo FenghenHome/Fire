@@ -14,7 +14,6 @@
 		<div class="card-content">
 			<?php if (count($message)) { ?>
 			<div>
-				您需要先解决以下错误才能继续
 				<ul>
 					<?php foreach ($message as $line) {
 						echo "<li>$line</li>";
