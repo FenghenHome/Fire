@@ -48,12 +48,12 @@ while($expiredtime=mysql_fetch_array($result)){
 	//获取当前日期
 	$now_date=date('Ymd');
 	//当前日期和过期日期一样时候，流量重置为0
-	if ($now_date==$expired_date){
-		//流量为0
-		$transfer_enable = 0;
-		//流量重置
-		$sql = "UPDATE user SET transfer_enable = '".$transfer_enable."' WHERE expired_time = '".$time."'";
-		//流量重置
+	if ($now_date>=$expired_date){
+		//enable为0
+		$enable = 0;
+		//enable重置
+		$sql = "UPDATE user SET enable = '".$enable."' WHERE expired_time = '".$time."'";
+		//enable重置
 		mysql_query($sql);
 		echo "done";
   	} else {
