@@ -1,5 +1,5 @@
 <?php
-//设置free.php和pass.txt权限为777，自动重置过期用户流量，自动更改试用密码，需要加入计划任务，每小时执行一次！
+//设置free.php和pass.txt权限为777，自动重置过期用户enable为0，自动更改试用密码，需要加入计划任务，每小时执行一次！
 //修改views/trial.php，修改其中的服务器地址和端口号！
 
 
@@ -47,7 +47,7 @@ while($expiredtime=mysql_fetch_array($result)){
 	$expired_date=date('Ymd',$time);
 	//获取当前日期
 	$now_date=date('Ymd');
-	//当前日期和过期日期一样时候，流量重置为0
+	//当前日期大于等于过期日期，enable重置为0
 	if ($now_date>=$expired_date){
 		//enable为0
 		$enable = 0;
